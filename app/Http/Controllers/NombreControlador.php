@@ -18,4 +18,12 @@ class NombreControlador extends Controller
         return ' Hi there from Controller!';
     }
     //return view('nombreview');
+
+    public function totest(Request $request)
+    {
+        return response()->json([
+            'name' => $request->input('name'),
+            'mess' => 'Hello World!',
+        ]);
+    }
 }
